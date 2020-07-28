@@ -3,8 +3,6 @@ let myButton = document.getElementById('myButton');
 myButton.onclick = function(element){
     let localcolor = element.target.value;
  
-    /* testing for the active tab
-    */
     chrome.tabs.query(
         {
             active: true, 
@@ -22,7 +20,7 @@ myButton.onclick = function(element){
     );
 }
 
-/*  load color value into our world
+/*  load data into popup
 */
 chrome.storage.sync.get('color', function(data){
     myButton.style.backgroundColor = data.color;
