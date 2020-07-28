@@ -2,7 +2,7 @@
 chrome.runtime.onInstalled.addListener(function(){
     chrome.storage.sync.set(
         {
-            color: 'orange'
+            color: 'red'
         },
 
         function(){
@@ -10,7 +10,6 @@ chrome.runtime.onInstalled.addListener(function(){
         }
     );
     
-    /* act on page under these conditions */
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function(){
         chrome.declarativeContent.onPageChanged.addRules([
             {
@@ -22,12 +21,10 @@ chrome.runtime.onInstalled.addListener(function(){
                     })
                 ],
 
-                /* call in the built in hook of sorts */
                 actions: [
                     new chrome.declarativeContent.ShowPageAction()
                 ]
             }
         ]);
     });
-    
 });
