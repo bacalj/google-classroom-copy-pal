@@ -2,7 +2,7 @@
     "name": "Campus School Copy Pal",
     "version": "1.0",
     "description": "Copy Google and Seesaw stuff so it pastes nicely",
-    "permissions": ["activeTab","declarativeContent", "storage"],
+    "permissions": ["activeTab","declarativeContent"],
     "background": {
         "scripts": [
             "background.js"

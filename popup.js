@@ -1,8 +1,7 @@
-let myButton = document.getElementById('myButton');
+let btn = document.getElementById('copyButton');
 
-myButton.onclick = function(element){
-    let localcolor = element.target.value;
- 
+btn.onclick = function(){
+    
     chrome.tabs.query(
         {
             active: true, 
@@ -10,20 +9,7 @@ myButton.onclick = function(element){
         }, 
         
         function(tabs) {
-            chrome.tabs.executeScript(
-                tabs[0].id,
-                {
-                    //code: 'document.body.style.backgroundColor = "orange";'
-                    file: "handleit.js"
-                }
-            );
+            chrome.tabs.executeScript(tabs[0].id, { file: "handleit.js" });
         }
     );
 }
-
-/*  load data into popup
-*/
-chrome.storage.sync.get('color', function(data){
-    myButton.style.backgroundColor = data.color;
-    myButton.setAttribute('value', data.color);
-});
