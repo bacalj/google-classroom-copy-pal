@@ -2,7 +2,7 @@
 chrome.runtime.onInstalled.addListener(function(){
     chrome.storage.sync.set(
         {
-            color: 'red'
+            color: 'pink'
         },
 
         function(){

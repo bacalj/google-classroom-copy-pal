@@ -13,7 +13,8 @@ myButton.onclick = function(element){
             chrome.tabs.executeScript(
                 tabs[0].id,
                 {
-                    code: 'document.body.style.backgroundColor = "' + localcolor + '";'
+                    //code: 'document.body.style.backgroundColor = "orange";'
+                    file: "handleit.js"
                 }
             );
         }
