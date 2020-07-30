@@ -1,15 +1,36 @@
-let btn = document.getElementById('copyButton');
+const currentTab = {
+    active: true, 
+    currentWindow: true
+}
 
-btn.onclick = function(){
-    
+let loadCheckboxesButton = document.getElementById('loadCheckboxesButton');
+
+loadCheckboxesButton.onclick = function(){
     chrome.tabs.query(
-        {
-            active: true, 
-            currentWindow: true
-        }, 
-        
+        currentTab,
         function(tabs) {
-            chrome.tabs.executeScript(tabs[0].id, { file: "handleit.js" });
+            chrome.tabs.executeScript(
+                tabs[0].id, 
+                { 
+                    file: "loadCheckboxes.js"
+                }
+            );
+        }
+    );
+}
+
+let copyItemsButton = document.getElementById('copyItemsButton');
+
+copyItemsButton.onclick = function(){
+    chrome.tabs.query(
+        currentTab,
+        function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id, 
+                { 
+                    file: "copyItems.js"
+                }
+            );
         }
     );
 }

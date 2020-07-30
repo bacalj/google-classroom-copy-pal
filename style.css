@@ -1,5 +1,12 @@
-/* button {
-    height:30px;
-    width:30px;
-    outline:none;
-} */
+/* styles for in the popup */
+button {
+    width:200px;
+    margin:6px;
+    font-size:130%;
+    padding:8px;
+    border-radius:5px;
+}
+
+button:hover {
+    background-color:lightblue;
+}
