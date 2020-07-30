@@ -31,7 +31,7 @@ dataArr.forEach(element => {
     outputStr += "\n";
 });
 
-/* lifted from here: git remote add origin https://github.com/bacalj/google-classroom-copy-pal.git */
+/* lifted from here: git remote add origin https://techoverflow.net/2018/03/30/copying-strings-to-the-clipboard-using-pure-javascript/ */
 var el = document.createElement('textarea');
 el.value = outputStr;
 el.style = {position: 'absolute', left: '-9999px'};
