@@ -31,10 +31,9 @@ dataArr.forEach(element => {
     outputStr += "\n";
 });
 
-
+/* lifted from here: git remote add origin https://github.com/bacalj/google-classroom-copy-pal.git */
 var el = document.createElement('textarea');
 el.value = outputStr;
-el.setAttribute('readonly', '');
 el.style = {position: 'absolute', left: '-9999px'};
 document.body.appendChild(el);
 el.select();
