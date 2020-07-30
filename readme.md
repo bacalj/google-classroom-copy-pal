@@ -16,7 +16,6 @@ This Chrome extension will let you add checkboxes to each item on your Classwork
 
 5. Click the *Copy checked items to the clipboard*
 
-6. Paste your list somewhere!
-
+6. Paste your list somewhere. 
 
 
